@@ -27,22 +27,7 @@ public class UserServiceImpl implements IUserService {
 	}
 
 
-	@Override
-	public User addUser(User u) {
-
-		User utilisateur = null; 
-
-		try {
-			// TODO Log à ajouter en début de la méthode 
-			utilisateur = userRepository.save(u); 
-			// TODO Log à ajouter à la fin de la méthode 
-
-		} catch (Exception e) {
-			// TODO log ici : l....("error in addUser() : " + e);
-		}
-
-		return utilisateur; 
-	}
+	
 
 	@Override 
 	public User updateUser(User u) {
@@ -52,12 +37,9 @@ public class UserServiceImpl implements IUserService {
 
 		
 		try {
-			// TODO Log à ajouter en début de la méthode 
 			userUpdated = userRepository.save(u); 
-			// TODO Log à ajouter à la fin de la méthode 
 
 		} catch (Exception e) {
-			// TODO log ici : l....("error in updateUser() : " + e);
 		}
 
 		return userUpdated; 
@@ -67,12 +49,9 @@ public class UserServiceImpl implements IUserService {
 	public void deleteUser(String id) {
 
 		try {
-			// TODO Log à ajouter en début de la méthode 
 			userRepository.deleteById(Long.parseLong(id)); 
-			// TODO Log à ajouter à la fin de la méthode 
 
 		} catch (Exception e) {
-			// TODO log ici : l....("error in deleteUser() : " + e);
 		}
 
 	}
