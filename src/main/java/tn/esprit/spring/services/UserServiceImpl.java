@@ -27,7 +27,16 @@ public class UserServiceImpl implements IUserService {
 	}
 
 
-	
+@Override
+public User addUser(User u) {
+    User utilisateur = null;
+    try {
+        utilisateur = userRepository.save(u);
+    } catch (Exception e) {
+        
+    }
+    return utilisateur;
+}	
 
 	@Override 
 	public User updateUser(User u) {
